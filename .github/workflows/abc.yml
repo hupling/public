@@ -1,0 +1,23 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+
+    steps:
+  
+    - name: ZAP Scan
+      uses: zaproxy/action-baseline@v0.3.0
+      with:
+        target: 'https://demo.testfire.net/'
+    - name: ZAP Scan a
+      uses: zaproxy/action-full-scan@v0.1.0
+      with:
+        target: 'https://demo.testfire.net/'
+        issue_title: 'abc'
