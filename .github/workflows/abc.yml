@@ -16,5 +16,5 @@ jobs:
     - name: ZAP Scan a
       uses: zaproxy/action-full-scan@v0.1.0
       with:
-        target: 'https://demo.testfire.net/'
+        target: 'https://public-firing-range.appspot.com'
         issue_title: 'abc'
